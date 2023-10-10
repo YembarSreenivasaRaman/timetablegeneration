@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+{%load static %}
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>narender sir 1st year timetable</title>
+
+    <link rel="stylesheet" href="{%static '/css/mystyles.css'%}">
+
+</head>
+
+<body>
+
+    <h1>TIMETABLE FOR NARENDER SIR ::</h1>
+
+    <hr />
+
+    <br />
+
+    {% if sublist %}
+
+    <table border="2" width="550">
+
+        <caption>
+            <h3> faculty:NARENDER YEAR:1_1 section:A SUB:EC
+            </h3>
+        </caption>
+
+        <thead>
+
+            <th>DAY</th>
+
+            <th>Classtime</th>
+
+        </thead>
+
+        <tbody>
+
+            {% for sub in sublist%}
+
+            <tr>
+
+                <td> {{sub.DAY}}</td>
+
+                <td> {{sub.Classtime}}</td>
+
+
+            </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    {%else%}
+
+    <p>No such records found </p>
+
+    {% endif %}
+
+
+
+</body>
+
+</html>

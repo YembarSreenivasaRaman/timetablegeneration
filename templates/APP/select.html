@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}   <!-- folder name-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>***select view***</title>
+    <style>
+        body{
+            background-color: cyan;
+        }
+        h1{
+            text-align: center;
+            color:blue;
+            /*border:2px Solid Brown;*/
+        }
+        h4{
+            /*background-color: lightpink;*/
+            text-align: center;
+            color:blue;
+            /*width:75%;
+            margin:auto;
+            border:1px Solid Red;*/
+        }
+        #div1{
+           /* border: 5px Solid Red;*/
+            height:350px;
+            display:flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-left: auto;
+        }
+
+        .indiv{
+            border:1px Solid Maroon;
+            float:left;
+            width:24%;
+            height:330px;
+            /*margin:1px;*/
+            margin-top: 5px;
+        }
+        img{
+            /*border:1px dotted blue;*/
+            width:100%;
+            height:327px;
+            /*margin:3px;*/
+           /* margin-left:8px;*/
+        }
+       /* img:hover{
+            border:2px Solid Blue;
+            width:95%;
+            height:320px;
+        }*/
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+<br/>
+<br/><h1>WELCOME TO CSI WESLEY</h1>
+     <h4>SELECT YOUR VIEW </h4>
+    <div id="div1">
+            <div class="indiv">
+                <a href="{%static 'images/student.png'%}" target="blank">
+                    <img src="{%static 'images/student.png'%}" alt="student.png" /><br/><br/>
+                    <span><center><a href="/student/"> STUDENT VIEW </a></center></span><br/>
+                </a>
+            </div>
+            <div class="indiv">
+                <a href="{%static 'images/facluty.jpg'%}" target="_parent">
+                    <img src="{%static 'images/facluty.jpg'%}" alt="faculty.jpg" /><br/><br/>
+                    <span><center><a href="/faculty/"> FACULTY VIEW </a></center></span><br/>
+                </a>
+            </div>
+
+    </div>
+
+</body>
+</html>

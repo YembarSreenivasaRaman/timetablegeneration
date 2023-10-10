@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>saithirumal sir 1st year timetable</title>
+    <link rel="stylesheet" href="{%static '/css/tablestyles.css'%}">
+</head>
+<body>
+    <h1>TIMETABLE FOR SAITHIRUMAL SIR ::</h1>
+    <hr />
+    <br />
+    {% if sublist %}
+        <div>
+    <table class="styled-table">
+        <caption><h3>  faculty:SAITHIRUMAL  YEAR:1_1   section:B     SUB: BEE </h3></caption>
+        <thead>
+            <th>DAY</th>
+            <th>Classtime</th>
+        </thead>
+        <tbody>
+            {% for sub in sublist%}
+            <tr>
+               <td> {{sub.DAY}}</td>
+               <td> {{sub.Classtime}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        </div>
+    {%else%}
+        <p>No such records found </p>
+    {% endif %}
+
+</body>
+</html>
